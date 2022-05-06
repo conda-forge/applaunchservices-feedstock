@@ -10,16 +10,15 @@ source:
   sha256: 3da9d5435aec18eb70000f51cdf5ca428ba4bf03f36d922eb04635f8b5af4296
 
 build:
-  noarch: python
   number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
   run:
-    - python >=3.6
+    - python
     - pyobjc-core
 
 test:

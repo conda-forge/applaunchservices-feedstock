@@ -20,10 +20,15 @@ requirements:
     - pip
   run:
     - python
+    - pyobjc-core
 
 test:
   imports:
     - applaunchservices
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/impact27/applaunchservices

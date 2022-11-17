@@ -6,4 +6,6 @@ github:
   branch_name: main
   tooling_branch_name: main
 noarch_platforms:
-  - osx_64
+- osx_64
+conda_build:
+  pkg_format: '2'

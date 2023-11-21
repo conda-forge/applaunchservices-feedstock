@@ -10,18 +10,17 @@ source:
   sha256: 1cc6ad5c6c88457230b3cc3d1f76c39c00dcd2597af9c6ee592dce5e67eb2cad
 
 build:
-  number: 2
+  number: 3
+  skip: true  # [not osx or (arm64 and py < 39)]
   script: {{ PYTHON }} -m pip install . -vv
-  noarch: python
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
   run:
-    - python >=3.6
+    - python
     - pyobjc-framework-coreservices
-    - __osx
 
 test:
   imports:
@@ -43,3 +42,4 @@ extra:
   recipe-maintainers:
     - impact27
     - goanpeca
+    - ccordoba12

@@ -11,16 +11,17 @@ source:
 
 build:
   number: 3
-  skip: true  # [not osx or (arm64 and py < 39)]
   script: {{ PYTHON }} -m pip install . -vv
+  noarch: python
 
 requirements:
   host:
-    - python
+    - python >=3.8
     - pip
   run:
-    - python
+    - python >=3.8
     - pyobjc-framework-coreservices
+    - __osx
 
 test:
   imports:
